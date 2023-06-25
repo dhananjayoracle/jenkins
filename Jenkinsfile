@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment{
-        check:"cheking"
-    }
     stages {
         stage('Build') {
             steps {
