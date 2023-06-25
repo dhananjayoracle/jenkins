@@ -22,7 +22,7 @@ pipeline {
                     {
                         println (line)
                     }
-
+                    sh "echo ${Hello}"
                     
 
                 }
@@ -31,6 +31,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                sh "echo ${Hello}"
             }
         }
     }
