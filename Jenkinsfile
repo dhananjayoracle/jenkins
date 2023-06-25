@@ -17,7 +17,8 @@ pipeline {
                             returnStdout: true
                         ).trim()
                     
-                    print(write_status)
+                    def lines = readFile(file: "tmp_alias_output").split('\n')
+                    print(lines)
                     
 
                 }
