@@ -18,7 +18,11 @@ pipeline {
                         ).trim()
                     
                     def lines = readFile(file: "tmp_output").split('\n')
-                    print(lines)
+                    for (line in lines)
+                    {
+                        println (line)
+                    }
+
                     
 
                 }
