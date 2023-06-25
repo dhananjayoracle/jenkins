@@ -17,7 +17,9 @@ pipeline {
                             returnStdout: true
                         ).trim()
                     
+                    print(write_status)
                     
+
                 }
             }
         }
