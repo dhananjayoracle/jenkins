@@ -1,6 +1,7 @@
 # import jenkins
 # import json
-# import os
+
+import os
 
 
 # host='http://localhost:8080'
@@ -15,7 +16,7 @@
 # print(jobs)
 
 
-print("this is just a sample file")
+print(f"this is just a sample file")
 
 
 
