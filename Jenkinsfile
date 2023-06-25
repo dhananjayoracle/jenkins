@@ -11,7 +11,14 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "python3 sample.py"
+                script{
+                    write_status = sh (
+                            script: 'python3 sample.py > tmp_output',
+                            returnStdout: true
+                        ).trim()
+                    
+                    
+                }
             }
         }
         stage('Deploy') {
