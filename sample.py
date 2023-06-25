@@ -1,6 +1,6 @@
-import jenkins
-import json
-import os
+# import jenkins
+# import json
+# import os
 
 
 # host='http://localhost:8080'
