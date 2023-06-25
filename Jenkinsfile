@@ -30,8 +30,10 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                sh "echo ${Hello}"
+                withCredentials([usernamePassword(credentialsId: '312ba97a-c773-41c0-ba8c-3044af7d4076', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                    sh "echo ${user} ${pass}"
+
+                }
             }
         }
     }
