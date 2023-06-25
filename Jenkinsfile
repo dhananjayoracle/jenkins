@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment{
+        check:"cheking"
+    }
     stages {
         stage('Build') {
             steps {
@@ -14,7 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} and ${env.check}"
             }
         }
     }
