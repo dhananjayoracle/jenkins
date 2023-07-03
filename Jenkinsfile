@@ -16,7 +16,7 @@ pipeline {
                             script: 'python3 sample.py > tmp_output',
                             returnStdout: true
                         ).trim()
-                    println write_status
+                    println "Hello ${write_status}"
                 }
             }
         }
