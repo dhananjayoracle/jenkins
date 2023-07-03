@@ -16,7 +16,7 @@ pipeline {
                             script: 'python3 sample.py > tmp_output',
                             returnStdout: true
                         ).trim()
-                    
+                    println write_status
                     def lines = readFile(file: "tmp_output").split('\n')
                     for (line in lines)
                     {
