@@ -16,7 +16,7 @@ import os
 # print(jobs)
 
 
-print(f"this is just a sample file {os.environ.get('Hello')}")
+print(f"this is just a sample file")
 
 
 

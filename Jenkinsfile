@@ -17,22 +17,6 @@ pipeline {
                             returnStdout: true
                         ).trim()
                     println write_status
-                    def lines = readFile(file: "tmp_output").split('\n')
-                    for (line in lines)
-                    {
-                        println (line)
-                    }
-                    sh "echo ${Hello}"
-                    
-
-                }
-            }
-        }
-        stage('Deploy') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: '312ba97a-c773-41c0-ba8c-3044af7d4076', passwordVariable: 'pass', usernameVariable: 'user')]) {
-                    sh "echo ${user} ${pass}"
-
                 }
             }
         }
