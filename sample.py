@@ -15,6 +15,7 @@ import os
 # jobs=server.get_all_jobs()
 # print(jobs)
 
+print("this is a sample file")
 
 print("\033[91m This is just a sample file \033[0m")
 print("\033[91mThis is just a sample file \033[0m")

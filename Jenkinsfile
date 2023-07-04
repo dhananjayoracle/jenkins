@@ -12,12 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 script{
-                    write_status = sh (
-                            script: 'python3 sample.py > tmp_output',
-                            returnStdout: true
-                        ).trim()
-                    println "Hello ${write_status}"
-                  
+                   sh 'python3 sample.py'
                   
                 }
             }
